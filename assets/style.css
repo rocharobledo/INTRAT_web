@@ -26,6 +26,10 @@
     background-position: 0 50%;
   }
 }
+body {
+  background: linear-gradient(#fefefe, #e5e5e5);
+}
+
 .header_temp {
   display: flex;
   flex-direction: column;
@@ -36,7 +40,14 @@
   margin-right: 30px;
 }
 .header_temp img {
-  margin-top: 40px;
+  margin: 40px auto;
+  width: 40%;
+}
+@media (max-width: 480px) {
+  .header_temp img {
+    width: 70%;
+    margin-bottom: 20px;
+  }
 }
 .header_temp h1 {
   background: rgba(255, 255, 255, 0.25);
@@ -45,7 +56,6 @@
   font-style: normal;
   letter-spacing: 1pt;
   font-size: 2rem;
-  margin-top: 30px;
   padding: 20px;
   color: #4A96D2;
 }
@@ -58,22 +68,19 @@
   margin-bottom: 50px;
 }
 
-.main__bcg {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 40px;
-}
-.main__bcg .mid__title {
+main .main__bcg {
+  margin: 0 auto;
+  padding: 0 40px;
   font-family: forma-djr-display, sans-serif;
+  text-align: center;
+}
+main .main__bcg :nth-child(1) {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  text-align: center;
   font-weight: 600;
-  font-style: normal;
-  letter-spacing: 1pt;
-  font-size: 4rem;
-  letter-spacing: 2pt;
-  line-height: 42pt;
-  color: white;
+  margin-bottom: 40px;
+  color: #ffffff;
   -webkit-animation: fluido 30s ease-in-out infinite;
           animation: fluido 30s ease-in-out infinite;
   background: linear-gradient(90deg, rgb(74, 150, 210) 45%, rgb(0, 148, 163) 100%);
@@ -82,31 +89,40 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.main__bcg h2 {
-  font-family: forma-djr-display, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+@media (max-width: 480px) {
+  main .main__bcg :nth-child(1) {
+    font-size: 3rem;
+    line-height: 2.5rem;
+  }
+}
+main .main__bcg :nth-child(2) {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
   letter-spacing: 1pt;
-  font-size: 1.5rem;
-  margin: 50px 30px 20px 30px;
   color: #4A96D2;
+  margin-bottom: 20px;
 }
-.main__bcg .h2__par {
-  margin-top: -10px;
-  font-family: forma-djr-display, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  letter-spacing: 1pt;
+main .main__bcg :nth-child(3) {
   font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 1pt;
 }
-.main__bcg .contact__button {
+main .contact__button {
   width: 200px;
-  margin-top: 40px;
+  margin: 40px auto;
   padding: 10px;
   background: #727272;
   border-radius: 5px;
+  text-align: center;
+  transition: 2s;
 }
-.main__bcg .contact__button a {
+main .contact__button:hover {
+  background-color: #0094A3;
+  scale: 1.3;
+}
+main a {
   color: #fff;
   font-family: forma-djr-display, sans-serif;
   font-weight: 400;
